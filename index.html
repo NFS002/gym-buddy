@@ -16,34 +16,14 @@
 
 <body>
     
-    <form name="contact" method="POST" data-netlify="true">
-        <p>
-          <label>Your Name: <input type="text" name="name" /></label>   
-        </p>
-        <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label>Your Role: <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select></label>
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-
+  
   <div class="container">
     <div class="row">
       <div class="col-md-10 mx-auto mt-5">
         <h1 class="p-5">💪😅🙀😋💪FIND A GYM BUDDY👊😧😬🙌👊</h1>
         <!-- Get out of here, you're not clever -->
-        <form name="gym-buddy" data-netlify="true" method="POST">
- 
+        <form name="gym-buddy" data-netlify="true" data-netlify-recaptcha="true" method="POST">
+          
           <div class="form-group">
             <label for='name'>Name:
               <input name="Name" type="text" class="form-control" id="name" placeholder="Name">
@@ -108,7 +88,12 @@
               Select at least one availability slot
           </div>
        
-         
+          <p class="hidden">
+            <label>Suck my honeypot bitch<input name="bot-field" /></label>
+          </p>
+          
+          <div data-netlify-recaptcha="true"></div>
+
           <input type="submit" value="Submit" class="btn btn-info btn-block">
         </form>
         <!-- Seriously, just fuck off -->
